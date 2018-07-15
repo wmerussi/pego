@@ -1,0 +1,202 @@
+/* Google fonts imports */
+@import url("https://fonts.googleapis.com/css?family=Work+Sans");
+
+/* Variables */
+:root {
+  /* Bootstrap grid breakpoints (mainly for reference) */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  /* Space used on margin and padding */
+  --space-small:  16px;
+  --space-medium: 26px;
+  --space-large:  32px;
+  --space-xlarge: 64px;
+
+  /* Font-size variables */
+  --size-small:   10px;
+  --size-base:    16px;
+  --size-medium:  21px;
+  --size-large:   32px;
+  --size-xlarge:  36px;
+  --size-xxlarge: 42px;
+  --size-huge:    48px;
+
+  /* Line-height variables */
+  --height-small:   11px;
+  --height-base:    19px;
+  --height-medium:  25px;
+  --height-large:   38px;
+  --height-xlarge:  42px;
+  --height-xxlarge: 49px;
+  --height-huge:    57px;
+
+  /* Color variables */
+  --color-light: hsl(0, 0%, 100%); /* #fff */
+  --color-dark:  hsl(0, 0%, 15%);  /* #272727 */
+}
+
+/* Resets */
+html, body, main, nav, section, header,
+div, h2, p, ul, li, img, a, span {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Elements */
+body {
+  background-color: var(--color-dark);
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  color: var(--color-light);
+  padding: var(--space-large) 0;
+}
+
+header .row + .row {
+  margin-top: var(--space-large);
+}
+
+nav {
+  font-size: var(--size-medium);
+  line-height: var(--height-medium);
+  text-align: right;
+}
+
+nav li + li {
+  margin-top: var(--space-medium);
+}
+
+section {
+  margin-top: var(--space-large);
+}
+
+section + section {
+  margin-top: var(--space-xlarge);
+}
+
+h2 {
+  margin-bottom: var(--space-small);
+}
+
+p {
+  font-size: var(--size-medium);
+  line-height: var(--height-medium);
+  letter-spacing: -.3px;
+}
+
+h2,
+span {
+  font-size: var(--size-small);
+  line-height: var(--height-small);
+}
+
+a {
+  color: var(--color-light);
+  font-weight: bold;
+}
+
+a[disabled] {
+  text-decoration: line-through;
+  cursor: default;
+  opacity: .3;
+}
+
+/* IDs */
+#social li:nth-child(n + 3) {
+  margin-top: var(--space-small);
+}
+
+#social a {
+  font-size: var(--size-base);
+  line-height: var(--height-base);
+}
+
+/* Screen Reader Config*/
+.screen-reader-box {
+  margin: 0 !important; /* Must be important to override inherited margin properties */
+}
+
+.screen-reader-text {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  padding: 2px 4px;
+
+  font-size: var(--size-small);
+  line-height: var(--height-small);
+  color: var(--color-dark);
+  text-align: center;
+
+  background-color: var(--color-light);
+  transform: translateX(-50%);
+
+  -webkit-transition: top 200ms ease-in-out;
+     -moz-transition: top 200ms ease-in-out;
+      -ms-transition: top 200ms ease-in-out;
+       -o-transition: top 200ms ease-in-out;
+          transition: top 200ms ease-in-out;
+}
+
+.screen-reader-text:focus {
+  position: absolute;
+  top: 0;
+}
+
+/* Bootstrap SM Grid Breakpoint */
+@media (min-width: 576px) {
+  p {
+    font-size: var(--size-large);
+    line-height: var(--height-large);
+  }
+
+  #social li:nth-child(n + 3) {
+    margin-top: 0;
+  }
+}
+
+/* Bootstrap MD Grid Breakpoint */
+@media (min-width: 768px) {
+  p {
+    font-size: var(--size-xlarge);
+    line-height: var(--height-xlarge);
+  }
+}
+
+/* Bootstrap LG Grid Breakpoint */
+@media (min-width: 992px) {
+  p {
+    font-size: var(--size-xxlarge);
+    line-height: var(--height-xxlarge);
+  }
+}
+
+/* Bootstrap XL Grid Breakpoint */
+@media (min-width: 1200px) {
+  p {
+    font-size: var(--size-huge);
+    line-height: var(--height-huge);
+  }
+}
