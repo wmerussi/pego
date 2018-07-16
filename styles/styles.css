@@ -113,7 +113,8 @@ span {
   line-height: var(--height-small);
 }
 
-a {
+a,
+b {
   color: var(--color-light);
   font-weight: bold;
 }
